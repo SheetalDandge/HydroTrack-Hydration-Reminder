@@ -1,64 +1,137 @@
-# 💧 Hydration Reminder Web App
+# 💧 HydroTrack – Hydration Reminder System
 
-A Django-based hydration reminder application to help users maintain healthy water intake habits. Built with Celery + Redis for scheduled email notifications, and includes user authentication, streak tracking, reminders, and more.
+A Django-based web application designed to help users maintain healthy hydration habits by tracking their water intake and supporting regular hydration reminders.
 
-![Django](https://img.shields.io/badge/Django-5.2-green.svg)
-![Celery](https://img.shields.io/badge/Celery-5.x-orange.svg)
-![Redis](https://img.shields.io/badge/Redis-7.x-red.svg)
-![SQLite](https://img.shields.io/badge/SQLite-lightblue.svg)
+## 📌 About the Project
 
----
+HydroTrack is a web-based hydration management system developed using Python and Django. The main objective is to encourage users to stay hydrated by providing a platform for managing their daily hydration activities.
 
-## 🚀 Features
+The application includes user authentication and profile management, providing a foundation for personalized hydration tracking.
 
-- ✅ User registration, login, and profile management
-- 💧 Daily water intake tracking
-- 🌤️ Dynamic hydration goals 
-- 🔔 Email reminders using Celery and Redis
-- 🔥 Daily streaks and hydration history
+## ✨ Features
 
----
+- **User Registration:** New users can create an account.
+- **User Login:** Registered users can securely access their accounts.
+- **User Profile Management:** User profiles are automatically created when a user registers.
+- **Hydration Management:** Designed to support daily water intake tracking.
+- **Hydration Reminders:** Focuses on encouraging users to maintain regular water-drinking habits.
+- **Django Backend:** Uses Django for application logic and backend functionality.
 
-## 🛠️ Tech Stack
+## 🛠️ Technologies Used
 
-- **Backend:** Django 5.2
-- **Database:** SQLite (can be upgraded to PostgreSQL/MySQL)
-- **Task Queue:** Celery
-- **Broker:** Redis
-- **Email Provider:** SMTP (Gmail)
-- **Frontend:** HTML5, CSS3, JavaScript, Bootstrap (custom styling)
+| Technology | Purpose |
+|---|---|
+| Python 3.13.5 | Backend programming |
+| Django 5.2.3 | Web framework |
+| SQLite | Local development database |
+| HTML | Web page structure |
+| CSS | Styling |
+| JavaScript | Frontend interactions |
 
----
+## 📂 Project Structure
 
-## 📦 Installation
+```text
+HydroTrack/
+│
+├── hydration_project/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── tracker/
+│   ├── migrations/
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── signals.py
+│   └── admin.py
+│
+├── manage.py
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+## ⚙️ Installation and Setup
+
+Follow these steps to run the project locally.
+
+### 1. Clone the Repository
 
 ```bash
-# Clone the repo
- git clone https://github.com/kalyaniG27/Hydration_Remainder_solution.git
- cd Hydration_Remainder_solution
-      
-# Setup virtual environment
-python -m venv .venv
-source .venv/Scripts/activate  # On Windows
+git clone https://github.com/SheetalDandge/HydroTrack-Hydration-Reminder.git
+```
 
-# Install dependencies
+### 2. Navigate to the Project Folder
+
+```bash
+cd HydroTrack-Hydration-Reminder
+```
+
+### 3. Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate the Virtual Environment
+
+For Windows PowerShell:
+
+```bash
+venv\Scripts\Activate
+```
+
+### 5. Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# Run migrations
+### 6. Apply Database Migrations
+
+```bash
 python manage.py migrate
+```
 
-# Create superuser (optional)
-python manage.py createsuperuser
+### 7. Run Django Development Server
 
-# Start Redis server (separately)
-redis-server
-
-# Start Celery worker
-celery -A hydration_project worker --pool=solo -l info
-
-# Start Celery beat (for periodic tasks)
-celery -A hydration_project beat -l info
-
-# Run the server
+```bash
 python manage.py runserver
-﻿# Hydration Reminder Web App
+```
+
+### 8. Open in Browser
+
+Visit:
+
+```text
+http://127.0.0.1:8000/
+```
+
+## 🎯 Project Objective
+
+The objective of HydroTrack is to develop a simple and user-friendly hydration management application that encourages healthy water-drinking habits through technology.
+
+## 📚 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Django web application development.
+- Python backend programming.
+- User authentication and registration.
+- Django models and database management.
+- Django signals and automatic profile creation.
+- Managing project dependencies and virtual environments.
+- Version control using Git and GitHub.
+
+## 👩‍💻 Developer
+
+**Sheetal Dandge**
+
+- GitHub: [SheetalDandge](https://github.com/SheetalDandge)
+- Project Repository: [HydroTrack – Hydration Reminder System](https://github.com/SheetalDandge/HydroTrack-Hydration-Reminder)
+
+---
+
+⭐ If you find this project interesting, feel free to explore the repository!
